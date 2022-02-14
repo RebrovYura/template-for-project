@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--white);
+    background-color: transparent; //var(--background);
     z-index: var(--z-upper);
 
     &__nav {
@@ -12,9 +12,9 @@
     }
 
     &__nav-menu {
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 847px) {
             position: fixed;
-            background-color: var(--white);
+            background-color: var(--background);
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
             padding: 2.5rem 0;
             width: 90%;
@@ -36,7 +36,7 @@
     &__nav-link,
     &__nav-logo,
     &__nav-burger {
-        color: var(--black);
+        color: var(--text-color);
         font-weight: var(--font-semi-bold);
     }
 
@@ -44,23 +44,39 @@
     &__nav-theme {
         transition: 0.2s;
         &:hover {
-            color: var(--yellow);
+            color: var(--dark-cyan);
         }
     }
 
     &__nav-logo {
-        color: var(--golden);
+        color: var(--dark-cyan);
         font-size: 2rem;
     }
 
     &__nav-theme {
         cursor: pointer;
-        color: var(--black);
+        color: var(--text-color);
     }
 
     &__nav-burger {
         font-size: 1.3rem;
         cursor: pointer;
+    }
+}
+
+.registration-signin {
+    background-color: var(--dark-cyan);
+    color: var(--background);
+
+    &:hover {
+        color: var(--background);
+        background-color: var(--gunmetal);
+    }
+}
+
+.registration-login {
+    &:hover {
+        color: var(--text-color);
     }
 }
 
@@ -78,7 +94,7 @@
         left: 45%;
         width: 5px;
         height: 5px;
-        background-color: var(--title-color);
+        background-color: var(--background);
         border-radius: 50%;
     }
 }

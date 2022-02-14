@@ -1,2 +1,3 @@
 documents/*
 .vscode/*
+src/scss/config/_mixins.scss

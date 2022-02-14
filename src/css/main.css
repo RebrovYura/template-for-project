@@ -1,10 +1,10 @@
 :root {
-  --white: #F4F4F9;
-  --lightgray: #bfbdc1;
-  --gray: #6d6a75;
-  --black: #37323e;
-  --yellow: #deb841;
-  --golden: #de9e36;
+  --background: #e7e4e6;
+  --gunmetal: #143642;
+  --dark-cyan: #0F8B8D;
+  --text-color: #37323e;
+  --carrot: #EC9A29;
+  --carnelian: #A8201A;
   --main-font: "Poppins", sans-serif;
   --text-font: "Merriweather", serif;
   --bigges-font-size: 2rem;
@@ -39,11 +39,11 @@ html {
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
-  font-family: var(--text-font);
+  margin: 0 0 0 0;
+  font-family: var(--main-font);
   font-size: var(--normal-font-size);
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--background);
+  color: var(--text-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -80,7 +80,7 @@ h1,
 h2,
 h3 {
   font-weight: var(--font-semi-bold);
-  color: var(--black);
+  color: var(--text-color);
   line-height: 1.5;
 }
 
@@ -107,13 +107,6 @@ h3 {
           justify-content: space-between;
 }
 
-.flex-fd-c {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .grid {
   display: -ms-grid;
   display: grid;
@@ -121,9 +114,33 @@ h3 {
 }
 
 .container {
-  max-width: 968px;
+  max-width: 1280px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.default-btn {
+  padding: 1rem 3rem;
+  background-color: var(--dark-cyan);
+  color: var(--background);
+  font-weight: var(--font-semi-bold);
+  border-radius: 2px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.default-btn:hover {
+  background-color: var(--gunmetal);
+}
+
+.small-btn {
+  border: 2px solid var(--dark-cyan);
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.small-btn:hover {
+  border: 2px solid var(--gunmetal);
 }
 
 .header {
@@ -132,7 +149,7 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--white);
+  background-color: transparent;
   z-index: var(--z-upper);
 }
 
@@ -140,10 +157,10 @@ h3 {
   height: var(--header-height);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 847px) {
   .header__nav-menu {
     position: fixed;
-    background-color: var(--white);
+    background-color: var(--background);
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     padding: 2.5rem 0;
@@ -168,7 +185,7 @@ h3 {
 }
 
 .header__nav-link, .header__nav-logo, .header__nav-burger {
-  color: var(--black);
+  color: var(--text-color);
   font-weight: var(--font-semi-bold);
 }
 
@@ -178,22 +195,36 @@ h3 {
 }
 
 .header__nav-link:hover, .header__nav-theme:hover {
-  color: var(--yellow);
+  color: var(--dark-cyan);
 }
 
 .header__nav-logo {
-  color: var(--golden);
+  color: var(--dark-cyan);
   font-size: 2rem;
 }
 
 .header__nav-theme {
   cursor: pointer;
-  color: var(--black);
+  color: var(--text-color);
 }
 
 .header__nav-burger {
   font-size: 1.3rem;
   cursor: pointer;
+}
+
+.registration-signin {
+  background-color: var(--dark-cyan);
+  color: var(--background);
+}
+
+.registration-signin:hover {
+  color: var(--background);
+  background-color: var(--gunmetal);
+}
+
+.registration-login:hover {
+  color: var(--text-color);
 }
 
 .show-menu {
@@ -211,7 +242,7 @@ h3 {
   left: 45%;
   width: 5px;
   height: 5px;
-  background-color: var(--title-color);
+  background-color: var(--background);
   border-radius: 50%;
 }
 
@@ -220,7 +251,35 @@ h3 {
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (min-width: 767px) {
+.home {
+  min-height: 100vh;
+  background-image: url("../img/home_background2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home__inner-about {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home__inner-about h1 {
+  font-size: 3rem;
+}
+
+.home__inner-about p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 848px) {
   body {
     margin: 0;
   }
@@ -249,5 +308,11 @@ h3 {
 @media screen and (min-width: 1024px) {
   .container {
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    margin: 0 1.5rem;
   }
 }
