@@ -1,0 +1,34 @@
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding: 6rem 0 2rem;
+    }
+
+    .header {
+        &__nav {
+            height: calc(var(--header-height) + 1rem);
+        }
+
+        &__nav-list {
+            flex-direction: row;
+            column-gap: 3rem;
+        }
+
+        &__nav-burger {
+            display: none;
+        }
+    }
+
+    .change-theme {
+        position: initial;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container {
+        margin: 0 auto;
+    }
+}
