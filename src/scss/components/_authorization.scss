@@ -1,0 +1,9 @@
+.authorization {
+    min-height: 100vh;
+    justify-content: center;
+    background-color: var(--background);
+
+    form {
+        flex-direction: column;
+    }
+}

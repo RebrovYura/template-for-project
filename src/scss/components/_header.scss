@@ -64,20 +64,26 @@
     }
 }
 
-.registration-signin {
-    background-color: var(--dark-cyan);
-    color: var(--background);
-
-    &:hover {
+.registration {
+    &:nth-child(2){
+        background-color: var(--dark-cyan);
         color: var(--background);
-        background-color: var(--gunmetal);
+    
+        &:hover {
+            color: var(--background);
+            background-color: var(--gunmetal);
+        }
     }
+    
 }
 
-.registration-login {
-    &:hover {
-        color: var(--text-color);
+.registration {
+    &:nth-child(1){
+        &:hover {
+            color: var(--text-color);
+        } 
     }
+    
 }
 
 .show-menu {
