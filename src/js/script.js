@@ -1,9 +1,9 @@
-const showMenu = (toggleId, navId) =>{
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+        nav = document.getElementById(navId);
 
-    if(toggle && nav) {
-        toggle.addEventListener('click', ()=>{
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
             nav.classList.toggle('show-menu');
         })
     }
@@ -18,3 +18,13 @@ function linkAction() {
 }
 
 navLink.forEach(el => el.addEventListener('click', linkAction));
+
+
+const login = document.querySelectorAll('.registration');
+let reg_id;
+
+function printState() {
+    console.log(login.length);
+}
+
+login.forEach(el => el.addEventListener('click', printState));
