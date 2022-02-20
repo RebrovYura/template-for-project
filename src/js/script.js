@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
         nav = document.getElementById(navId);
@@ -21,43 +20,21 @@ function linkAction() {
 navLink.forEach(el => el.addEventListener('click', linkAction));
 
 
-const login = document.querySelectorAll('.registration');
-let reg_id;
+// const signin = document.querySelector('.sign-in');
+// const signup = document.querySelector('.sign-up');
+// const signinForm = document.querySelector('.signin-form');
+// const signupForm = document.querySelector('.signup-form');
 
-function printState() {
-    console.log(login.length);
-}
+// function showForm() {
+//     if (signin.addEventListener('click')) {
+//         signupForm.classList.add('.hide-form');
+//         signupForm.classList.remove('.hide-form');
+//     }
+//     if (signup.addEventListener('click')) {
+//         signinForm.classList.add('.hide-form');
+//         signupForm.classList.remove('.hide-form');
+//     }
+//     console.log(signin.addEventListener('click'));
+// }
 
-login.forEach(el => el.addEventListener('click', printState));
-=======
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId);
-
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show-menu');
-        })
-    }
-}
-showMenu('nav-burger', 'nav-menu');
-
-const navLink = document.querySelectorAll('.header__nav-link');
-
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.remove('show-menu');
-}
-
-navLink.forEach(el => el.addEventListener('click', linkAction));
-
-
-const login = document.querySelectorAll('.registration');
-let reg_id;
-
-function printState() {
-    console.log(login.length);
-}
-
-login.forEach(el => el.addEventListener('click', printState));
->>>>>>> b61e971f80dce077a527ead2a39e30a13dbe3abd
+// showForm();

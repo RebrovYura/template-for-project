@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap");
 :root {
   --background: #e7e4e6;
+  --white: #DAD2D8;
   --gunmetal: #143642;
   --dark-cyan: #0F8B8D;
+  --hover: #0F787A;
   --text-color: #37323e;
   --carrot: #EC9A29;
   --carnelian: #A8201A;
@@ -14,6 +16,8 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+  --font-light: 300;
+  --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
   --z-upper: 10;
@@ -108,6 +112,12 @@ h3 {
           justify-content: space-between;
 }
 
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -121,8 +131,7 @@ h3 {
 }
 
 .container-form {
-  margin: 0 auto;
-  margin: 2rem 2rem;
+  margin: 25px 2rem;
 }
 
 .default-btn {
@@ -131,8 +140,8 @@ h3 {
   color: var(--background);
   font-weight: var(--font-semi-bold);
   border-radius: 2px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .default-btn:hover {
@@ -147,6 +156,10 @@ h3 {
 
 .small-btn:hover {
   border: 2px solid var(--gunmetal);
+}
+
+.hide-form {
+  display: none;
 }
 
 .header {
@@ -290,14 +303,144 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--background);
+  background-color: var(--white);
 }
 
-.authorization form {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.authorization__content {
+  background-color: var(--dark-cyan);
+  min-width: 300px;
+  border-radius: 5px;
+  color: var(--background);
+  font-weight: var(--font-regular);
+  -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.authorization input,
+.authorization label {
+  display: block;
+}
+
+.authorization__inner-title {
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.authorization .form__textbox {
+  margin: 20px 0;
+}
+
+.authorization .form__textbox input {
+  height: 30px;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  outline: none;
+  border: none;
+  font-weight: var(--font-semi-bold);
+}
+
+.authorization .form__textbox label {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.authorization .form__textbox-group:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.authorization .form__checkbox {
+  margin-bottom: 20px;
+}
+
+.authorization .form__checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.authorization .form__checkbox input + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.authorization .form__checkbox input + label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.authorization .form__checkbox input:checked + label::before {
+  border-color: var(--carrot);
+  background-color: var(--carrot);
+  background-image: url("../img/icons/check-line.png");
+  background-size: cover;
+}
+
+.authorization .form__checkbox label {
+  font-size: 14px;
+}
+
+.authorization .form__button input {
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--gunmetal);
+  color: var(--background);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.authorization .form__button input:hover {
+  background-color: #0f787a;
+}
+
+.authorization__inner-link {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  font-weight: var(--font-light);
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
+.authorization__inner-link a {
+  color: var(--white);
+}
+
+.authorization__inner-link::before {
+  content: "";
+  position: absolute;
+  bottom: 150%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #0f787a;
 }
 
 @media screen and (min-width: 848px) {

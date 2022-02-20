@@ -5,33 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/main.css">
     <title>Authorization</title>
 </head>
 
 <body>
     <section class="authorization flex flex-ai-c">
-        <div class="authorization__content container">
-            <form action="" method="post" class="container-form flex flex-jc-sb">
-                <div class="form__group">
-                    <span>ACCOUNT LOGIN</span>
+        <div class="authorization__content">
+            <div class="authorization__inner container-form">
+                <div class="authorization__inner-title">
+                    <span>Account sign in</span>
                 </div>
-                <div class="form__group">
-                    <label for="email">Email</label>
-                    <input type="email" name="" id="">
+                <form action="" method="post">
+                    <div class="form__textbox">
+                        <div class="form__textbox-group">
+                            <label for="text">Email</label>
+                            <input type="text" id="text" maxlength="35">
+                        </div>
+                        <div class="form__textbox-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="form__checkbox flex">
+                        <div class="form__checkbox-group flex">
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox">Remember Me</label>
+                        </div>
+                    </div>
+                    <div class="form__button">
+                        <input type="button" value="Sign In">
+                    </div>
+                </form>
+                <div class="authorization__inner-link">
+                    <a href="#">Forgot your password?</a>
                 </div>
-                <div class="form__group">
-                    <label for="password">Password</label>
-                    <input type="password" name="" id="">
-                </div>
-                <div class="form__group">
-                    <input type="checkbox" name="" id="">
-                    <label for="checkbox">Remember Me</label>
-                </div>
-                <div class="form__group">
-                    <button type="submit">LOG IN</button>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
     <script src="/src/js/script.js"></script>

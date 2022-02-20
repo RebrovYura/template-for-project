@@ -1,9 +1,131 @@
 .authorization {
     min-height: 100vh;
     justify-content: center;
-    background-color: var(--background);
+    background-color: var(--white);
 
-    form {
-        flex-direction: column;
+    &__content {
+        background-color: var(--dark-cyan);
+        min-width: 300px;
+        border-radius: 5px;
+        color: var(--background);
+        font-weight: var(--font-regular);
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    input,
+    label {
+        display: block;
+    }
+
+    &__inner-title {
+        text-transform: uppercase;
+        font-size: 1.375rem;
+        line-height: 2rem;
+        font-weight: var(--font-semi-bold);
+    }
+
+    .form__textbox {
+        margin: 20px 0;
+
+        input {
+            height: 30px;
+            border-radius: 5px;
+            padding: 1rem 1rem;
+            outline: none;
+            border: none;
+            font-weight: var(--font-semi-bold);
+        }
+
+        label {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
+
+    .form__textbox-group:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .form__checkbox {
+        margin-bottom: 20px;
+        input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        input + label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                flex-shrink: 0;
+                flex-grow: 0;
+                border: 1px solid #adb5bd;
+                border-radius: 0.25em;
+                margin-right: 0.5em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+        }
+
+        input:checked + label::before {
+            border-color: var(--carrot);
+            background-color: var(--carrot);
+            background-image: url("../img/icons/check-line.png");
+            background-size: cover;
+        }
+
+        label {
+            //margin-left: 0.5rem;
+            font-size: 14px;
+        }
+    }
+
+    .form__button {
+        input {
+            border: none;
+            border-radius: 30px;
+            width: 100%;
+            padding: 12px 0;
+            background-color: var(--gunmetal);
+            color: var(--background);
+            font-weight: var(--font-bold);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #0f787a;
+            }
+        }
+    }
+
+    &__inner-link {
+        position: relative;
+        text-align: center;
+        font-size: 12px;
+        font-weight: var(--font-light);
+        text-decoration: underline;
+        margin-top: 30px;
+
+        a {
+            color: var(--white);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 150%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #0f787a;
+        }
     }
 }

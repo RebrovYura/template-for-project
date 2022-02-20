@@ -1,8 +1,10 @@
 :root {
     //Colors
     --background: #e7e4e6;
+    --white: #DAD2D8;
     --gunmetal: #143642;
     --dark-cyan: #0F8B8D;
+    --hover: #0F787A;
     --text-color: #37323e;
     --carrot: #EC9A29;
     --carnelian: #A8201A;
@@ -20,6 +22,8 @@
     --smaller-font-size: 0.75rem;
 
     //Font bold
+    --font-light: 300;
+    --font-regular: 400;
     --font-semi-bold: 600;
     --font-bold: 700;
 
