@@ -6,6 +6,7 @@
     width: 100%;
     background-color: transparent; //var(--background);
     z-index: var(--z-upper);
+    transition: 0.3s;
 
     &__nav {
         height: var(--header-height);
@@ -51,7 +52,7 @@
     &__nav-logo {
         color: var(--dark-cyan);
         font-size: 2rem;
-        font-weight: var(--font-bold);  
+        font-weight: var(--font-bold);
     }
 
     &__nav-theme {
@@ -106,4 +107,5 @@
 
 .scroll-header {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--background);
 }
