@@ -139,13 +139,13 @@ h3 {
   background-color: var(--dark-cyan);
   color: var(--background);
   font-weight: var(--font-semi-bold);
-  border-radius: 2px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .default-btn:hover {
-  background-color: var(--gunmetal);
+  background-color: var(--hover);
 }
 
 .small-btn {
@@ -155,7 +155,7 @@ h3 {
 }
 
 .small-btn:hover {
-  border: 2px solid var(--gunmetal);
+  border: 2px solid var(--hover);
 }
 
 .hide-form {
@@ -220,6 +220,7 @@ h3 {
 .header__nav-logo {
   color: var(--dark-cyan);
   font-size: 2rem;
+  font-weight: var(--font-bold);
 }
 
 .header__nav-theme {
@@ -239,7 +240,7 @@ h3 {
 
 .registration:nth-child(2):hover {
   color: var(--background);
-  background-color: var(--gunmetal);
+  background-color: var(--hover);
 }
 
 .registration:nth-child(1):hover {
@@ -299,11 +300,12 @@ h3 {
 }
 
 .authorization {
+  font-family: var(--main-font);
   min-height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--white);
+  background-color: var(--hover);
 }
 
 .authorization__content {
@@ -325,7 +327,8 @@ h3 {
   text-transform: uppercase;
   font-size: 1.375rem;
   line-height: 2rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-bold);
+  color: var(--carrot);
 }
 
 .authorization .form__textbox {
@@ -333,12 +336,14 @@ h3 {
 }
 
 .authorization .form__textbox input {
+  min-width: 230px;
   height: 30px;
   border-radius: 5px;
   padding: 1rem 1rem;
   outline: none;
   border: none;
   font-weight: var(--font-semi-bold);
+  font-size: 0.875rem;
 }
 
 .authorization .form__textbox label {
@@ -383,7 +388,7 @@ h3 {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  border: 1px solid #adb5bd;
+  border: 2px solid var(--white);
   border-radius: 0.25em;
   margin-right: 0.5em;
   background-repeat: no-repeat;
@@ -403,6 +408,7 @@ h3 {
 }
 
 .authorization .form__button input {
+  font-family: var(--main-font);
   border: none;
   border-radius: 30px;
   width: 100%;
@@ -417,7 +423,7 @@ h3 {
 }
 
 .authorization .form__button input:hover {
-  background-color: #0f787a;
+  background-color: var(--hover);
 }
 
 .authorization__inner-link {
@@ -425,12 +431,22 @@ h3 {
   text-align: center;
   font-size: 12px;
   font-weight: var(--font-light);
-  text-decoration: underline;
   margin-top: 30px;
 }
 
 .authorization__inner-link a {
   color: var(--white);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.authorization__inner-link a:hover {
+  color: var(--carrot);
+}
+
+.authorization__inner-link span {
+  color: var(--carrot);
+  font-weight: var(--font-bold);
 }
 
 .authorization__inner-link::before {
@@ -440,7 +456,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #0f787a;
+  background: var(--hover);
 }
 
 @media screen and (min-width: 848px) {

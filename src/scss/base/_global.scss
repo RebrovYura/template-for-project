@@ -87,11 +87,11 @@ h3 {
     background-color: var(--dark-cyan);
     color: var(--background);
     font-weight: var(--font-semi-bold);
-    border-radius: 2px;
-    transition: 0.2s;
+    border-radius: 5px;
+    transition: 0.3s;
 
     &:hover {
-        background-color: var(--gunmetal);
+        background-color: var(--hover);
     }
 }
 
@@ -101,7 +101,7 @@ h3 {
     padding: 10px 20px;
 
     &:hover {
-        border: 2px solid var(--gunmetal);
+        border: 2px solid var(--hover);
     }
 }
 

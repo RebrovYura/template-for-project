@@ -51,6 +51,7 @@
     &__nav-logo {
         color: var(--dark-cyan);
         font-size: 2rem;
+        font-weight: var(--font-bold);  
     }
 
     &__nav-theme {
@@ -71,7 +72,7 @@
 
         &:hover {
             color: var(--background);
-            background-color: var(--gunmetal);
+            background-color: var(--hover);
         }
     }
 }
