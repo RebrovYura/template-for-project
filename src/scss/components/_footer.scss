@@ -1,0 +1,13 @@
+.footer {
+    color: var(--background);
+
+    &__inner {
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__rights {
+        color: #6a6670;
+        padding: 1rem 0;
+    }
+}

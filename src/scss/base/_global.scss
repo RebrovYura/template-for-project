@@ -44,19 +44,12 @@ input,
 textarea {
     outline: none;
     border-color: transparent;
+    color: var(--text-color);
 }
 
 textarea {
     resize: none;
 }
-
-// h1,
-// h2,
-// h3 {
-//     font-weight: var(--font-semi-bold);
-//     color: var(--text-color);
-//     line-height: 1.5;
-// }
 
 h1 {
     line-height: 72px;

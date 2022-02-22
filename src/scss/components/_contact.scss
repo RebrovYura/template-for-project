@@ -1,7 +1,9 @@
 .contact {
     background-color: var(--dark-cyan);
+    padding-bottom: 5rem;
 
     &__inner {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__inner-form {
@@ -28,7 +30,29 @@
         form {
             flex-direction: column;
         }
-        
+    }
+
+    &__links {
+    }
+
+    &__links-inner {
+        flex-direction: column;
+        margin-left: 2rem;
+        font-weight: var(--font-semi-bold);
+    }
+
+    &__link-item {
+        a {
+            color: var(--carrot);
+        }
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__link-image {
+        // width: 100%;
+        // max-width: 30px;
     }
 
     &__form-textbox {
@@ -40,7 +64,7 @@
             margin-bottom: 1rem;
             font-family: var(--main-font);
             font-weight: var(--font-semi-bold);
-            transition: .3s;
+            transition: 0.3s;
 
             &:focus {
                 background-color: var(--background);
@@ -52,7 +76,7 @@
         justify-content: flex-end;
         a {
             background-color: var(--carrot);
-            transition: .3s;
+            transition: 0.3s;
         }
     }
 }

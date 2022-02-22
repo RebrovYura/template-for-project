@@ -27,3 +27,7 @@ function scrollHeader() {
 }
 
 window.addEventListener('scroll', scrollHeader)
+
+let rights = document.getElementById('rights');
+let year = new Date();
+rights.innerText += ' ' + year.getFullYear();
