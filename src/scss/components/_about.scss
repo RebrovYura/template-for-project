@@ -16,14 +16,12 @@
     @media screen and (max-width: 848px) {
 
         & {
-            padding: 3rem 0;
-            //min-height: auto;
+            padding: 6rem 0;
             background-color: var(--dark-cyan);
         }
 
         &::after {
             content: none;
-            //clip-path: none;
         }
 
         &__inner {
@@ -40,12 +38,6 @@
                 width: 100%;
             }
         }
-    }
-
-    &__item {
-    }
-
-    &__inner {
     }
 
     &__inner-content {
@@ -66,15 +58,7 @@
     }
 
     &__info-title {
-        line-height: 72px;
-        font-size: 3rem;
-        font-weight: var(--font-semi-bold);
         color: var(--text-color);
-
-        span {
-            font-weight: var(--font-bold);
-            color: var(--carrot);
-        }
     }
 
     &__info-subtitle {

@@ -40,12 +40,34 @@ img {
     height: auto;
 }
 
-h1,
-h2,
-h3 {
+input,
+textarea {
+    outline: none;
+    border-color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+// h1,
+// h2,
+// h3 {
+//     font-weight: var(--font-semi-bold);
+//     color: var(--text-color);
+//     line-height: 1.5;
+// }
+
+h1 {
+    line-height: 72px;
+    font-size: 3rem;
+    font-weight: var(--font-bold);
+}
+
+h2 {
+    line-height: 32px;
+    font-size: 1.5rem;
     font-weight: var(--font-semi-bold);
-    color: var(--text-color);
-    line-height: 1.5;
 }
 
 .flex {
@@ -80,6 +102,10 @@ h3 {
     &-form {
         margin: 25px 2rem;
     }
+
+    &-p-t {
+        padding-top: 6rem;
+    }
 }
 
 .default-btn {
@@ -108,4 +134,9 @@ h3 {
 
 .hide-form {
     display: none;
+}
+
+.selection-yellow {
+    color: var(--carrot);
+    font-weight: var(--font-bold);
 }
